@@ -35,6 +35,7 @@ app.get("/orgsList", (request, response) => {
 
 app.get("/api3/:path", (request, response) => {
     const reqParam = request.params.path;
+    console.log(reqParam);
     if (reqParam === "buh") {
         response.send(getBuh(request.query));
     } else if (reqParam === "analytics") {
